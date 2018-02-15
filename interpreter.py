@@ -2,7 +2,7 @@ import re
 
 from syntax import Syntax
 from utils import OPERATIONS, LOOP_CHARS
-from utils import UnbalancedLoopChars
+from utils import UnbalancedLoopCharsError
 
 
 class Interpreter:
@@ -64,7 +64,7 @@ class Interpreter:
                 if loop_in_count == 0:
                     self.position = self.position + index
                     return
-        raise UnbalancedLoopChars("hey")
+        raise UnbalancedLoopCharsError("hey")
 
     def parse_code(self):
         """ Parse the source code """

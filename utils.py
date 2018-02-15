@@ -27,5 +27,5 @@ def register_loop_symbol(symbol_type, symbol):
     return decorator
 
 
-class UnbalancedLoopChars(Exception):
+class UnbalancedLoopCharsError(Exception):
     pass
